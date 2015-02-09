@@ -6,7 +6,7 @@
 pysec documentation
 ===================
 
-Contents:
+Usage:
 
 .. toctree::
    :maxdepth: 2
@@ -14,6 +14,12 @@ Contents:
    campic
    network
 
+Development:
+
+.. toctree::
+   :maxdepth: 2
+
+   development
 
 
 Indices and tables

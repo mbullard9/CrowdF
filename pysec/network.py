@@ -5,6 +5,7 @@
 
 import logging
 import NetworkManager
+import struct
 
 # See https://developer.gnome.org/NetworkManager/0.9/spec.html
 
@@ -14,13 +15,21 @@ def print_nearby_networks():
         if dev.DeviceType != NetworkManager.NM_DEVICE_TYPE_WIFI:
             continue
         aps = [ap for ap in dev.SpecificDevice().GetAccessPoints()]
-        header = "SSID::Signal Strength::HwAddress"
+        header = u"{0:<20}{1:>6}{2:>20}".format('SSID',
+                                                'Signal',
+                                                'HwAddress')
         print(header)
         print("-"*len(header))
-        for ap in sorted(aps, key=lambda ap: ap.Ssid):
-            print(u"%s::%s::%s" % (ap.Ssid,
-                                   ap.Strength.encode("unicode_escape"),
-                                   ap.HwAddress))
+        for ap in sorted(aps,
+                         key=lambda ap: struct.unpack('B', ap.Strength)[0],
+                         reverse=True):
+            signal_strength = struct.unpack('B', ap.Strength)[0]
+            # print(u"%s::%s::%s" % (ap.Ssid,
+            #                        signal_strength,
+            #                        ap.HwAddress))
+            print(u"{0:<20}{1:>6}{2:>20}".format(ap.Ssid,
+                                                 str(signal_strength)+'%',
+                                                 ap.HwAddress))
 
 
 def main():

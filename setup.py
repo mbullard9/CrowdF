@@ -19,7 +19,7 @@ config = {
     'description': 'Tool to get stolen notebook back.',
     'long_description': "A tookit to get your notebook back if it was stolen",
     'install_requires': [
-        "NetworkManager",
+        "python-networkmanager",
         "SimpleCV",
         "six"
     ],

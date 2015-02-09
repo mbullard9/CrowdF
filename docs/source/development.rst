@@ -19,7 +19,7 @@ Everybody is welcome to contribute to ``pysec``. You can do so by
 * Development (please look at the issue tracker on GitHub)
 
 
-I suggest reading the issues page https://github.com/MartinThoma/hwrt/issues
+I suggest reading the issues page https://github.com/MartinThoma/pysec/issues
 for more ideas how you can contribute.
 
 

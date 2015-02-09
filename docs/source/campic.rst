@@ -11,3 +11,6 @@ This tool helps to get pictures with a built-in camera:
     optional arguments:
       -h, --help            show this help message and exit
       -f FILE, --file FILE  write report to FILE
+
+
+With the command `pysec campic -f /home/moose/shot.png` you will get a file 
