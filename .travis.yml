@@ -8,8 +8,9 @@ install:
   - pip install six
   - pip install python-networkmanager
   - pip install SimpleCV
+  - pip install pygame
 script:
-  - nosetests --with-cov --cover-package pysec --logging-level=INFO
+  - nosetests --with-coverage
 before_install:
   - sudo apt-get install python-opencv
 after_success:

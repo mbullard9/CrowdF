@@ -21,7 +21,8 @@ config = {
     'install_requires': [
         "python-networkmanager",
         "SimpleCV",
-        "six"
+        "six",
+        "pygame"
     ],
     'keywords': ['pysec', 'security', 'notebook'],
     'download_url': 'https://github.com/MartinThoma/pysec',
