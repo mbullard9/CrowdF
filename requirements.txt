@@ -2,4 +2,3 @@ future
 six
 python-networkmanager
 SimpleCV
-pygame
