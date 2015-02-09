@@ -6,7 +6,7 @@ python:
 install: 
   - pip install future
   - pip install six
-  - pip install NetworkManager
+  - pip install python-networkmanager
   - pip install SimpleCV
 script:
   - nosetests --with-coverage

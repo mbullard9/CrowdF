@@ -1,4 +1,4 @@
 future
 six
-NetworkManager
+python-networkmanager
 SimpleCV
