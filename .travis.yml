@@ -9,8 +9,8 @@ install:
   - pip install python-networkmanager
   - pip install SimpleCV
 script:
-  - nosetests --with-coverage
-script:
   - nosetests --with-cov --cover-package pysec --logging-level=INFO
+before_install:
+  - sudo apt-get install python-opencv
 after_success:
   - coveralls
